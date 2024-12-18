@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Editor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/theme/monokai.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Code Editor</h1>
+        </header>
+        
+        <div class="editor-controls">
+            <div class="language-selector">
+                <label for="language-select">Select Language:</label>
+                <select id="language-select">
+                    <option value="python">Python</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="c">C</option>
+                    <option value="cpp">C++</option>
+                    <option value="java">Java</option>
+                </select>
+            </div>
+            <div class="theme-selector">
+                <label for="theme-select">Editor Theme:</label>
+                <select id="theme-select">
+                    <option value="default">Default</option>
+                    <option value="monokai">Monokai</option>
+                    <option value="dracula">Dracula</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="editor-wrapper">
+            <textarea id="code-editor"></textarea>
+        </div>
+
+        <div class="action-buttons">
+            <button id="run-button" onclick="runCode()">
+                <i class="run-icon">▶</i> Run Code
+            </button>
+            <button id="clear-button" onclick="clearEditor()">
+                <i class="clear-icon">✖</i> Clear
+            </button>
+        </div>
+
+        <div id="output-container">
+            <h3>Output</h3>
+            <div id="output" class="output-area"></div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/codemirror.min.js"></script>
+    
+    <!-- Language Modes -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/mode/python/python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/mode/clike/clike.min.js"></script>
+
+    <!-- Theme Modes -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/theme/monokai.min.js"></script>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>

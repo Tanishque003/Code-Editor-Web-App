@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222228;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.language-selector {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.CodeMirror {
+    height: 400px;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+
+#run-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #485cac;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#run-button:hover {
+    background-color: #45a049;
+}
+
+#output {
+    margin-top: 15px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.output {
+    color: #333;
+}
+
+.error {
+    color: red;
+}
